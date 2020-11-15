@@ -15,9 +15,7 @@ int sol(long long int numero) {
 	else {
 		return 1 + sol(numero/10);
 	}
-
  }
-
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
@@ -31,9 +29,7 @@ bool resuelveCaso() {
 
 	std::cout << sol(num) << '\n';
 
-
 	return true;
-
 }
 
 int main() {
