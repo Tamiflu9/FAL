@@ -1,5 +1,5 @@
-﻿// Nombre del alumno .....
-// Usuario del Juez ......
+﻿// TAMARA HUERTAS SMOLIS
+// A37
 
 
 #include <iostream>
@@ -7,12 +7,15 @@
 #include <fstream>
 
 
-void sol(long long int numero, int &c) {
+int sol(long long int numero) {
 
-	if (numero > 0) {
-		c++;
-		sol(numero/10, c);
+	if (numero < 10) {
+		return 1;
 	}
+	else {
+		return 1 + sol(numero/10);
+	}
+
  }
 
 
@@ -26,9 +29,7 @@ bool resuelveCaso() {
 	if (!std::cin)
 		return false;
 
-	int cont = 0;
-	sol(num, cont);
-	std::cout << cont << '\n';
+	std::cout << sol(num) << '\n';
 
 
 	return true;
